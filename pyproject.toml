@@ -1,0 +1,9 @@
+[project]
+name = "agentlearning"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "openai>=2.41.1",
+    "tavily-python>=0.7.26",
+]
