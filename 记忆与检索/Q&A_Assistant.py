@@ -60,6 +60,10 @@ class PDFLearningAssistant:
         start_time = time.time()
 
         try:
+            # 先清空上次加载的文档数据，避免新旧混在一起
+            if self.current_document:
+                self.rag_tool.run({"action": "clear", "confirm": True})
+
             # 使用RAG工具处理PDF
             result = self.rag_tool.run({
                 "action":"add_document",

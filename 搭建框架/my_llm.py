@@ -21,6 +21,7 @@ class MyLLM(HelloAgentsLLM):
 
             # 解析 DashScope 的凭证
             self.api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
+            # 用阿里云官方 DashScope OpenAI 兼容接口（网关不支持 /chat/completions）
             self.base_url = base_url or "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
             # 验证凭证是否存在
@@ -31,7 +32,7 @@ class MyLLM(HelloAgentsLLM):
             self.model = model or os.getenv("DASHSCOPE_MODEL_NAME") or "qwen3.6-plus"
             self.temperature = kwargs.get("temperature", 0.7)
             self.max_tokens = kwargs.get("max_tokens")
-            self.timeout = kwargs.get("timeout", 60)
+            self.timeout = kwargs.get("timeout") or int(os.getenv("LLM_TIMEOUT", "120"))
 
             # 使用获取的参数创建OpenAI客户端实例
             self._client = OpenAI(api_key=self.api_key, base_url=self.base_url, timeout=self.timeout)
