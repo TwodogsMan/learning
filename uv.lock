@@ -35,6 +35,7 @@ dependencies = [
     { name = "asyncio" },
     { name = "autogen-agentchat" },
     { name = "autogen-ext", extra = ["azure", "openai"] },
+    { name = "bfcl" },
     { name = "dashscope" },
     { name = "dotenv" },
     { name = "fastmcp" },
@@ -66,6 +67,7 @@ requires-dist = [
     { name = "asyncio", specifier = ">=4.0.0" },
     { name = "autogen-agentchat", specifier = ">=0.7.5" },
     { name = "autogen-ext", extras = ["azure", "openai"], specifier = ">=0.7.5" },
+    { name = "bfcl", specifier = ">=1.0.1" },
     { name = "dashscope", specifier = ">=1.25.23" },
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "fastmcp", specifier = ">=3.4.4" },
@@ -516,6 +518,19 @@ wheels = [
 ]
 
 [[package]]
+name = "bfcl"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "circuit" },
+    { name = "parts" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/de/d8/a0947cb2894f02ecfc35866f07ca120149c3dcec592c94eef7859f59c047/bfcl-1.0.1.tar.gz", hash = "sha256:a8fb58bdc8eeb323b459156bf3d7d070d8339c13a129a43ebaab7317ec58e3d3", size = 7953, upload-time = "2022-06-01T00:25:52.667Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/db/ad/c28f283ba9ebd79ea58d17f3a64432eac284fff224e7ae264ba0e56e67ba/bfcl-1.0.1-py3-none-any.whl", hash = "sha256:5c1e49d92913d00d000ba38ea36597236de601a4caf6abe089bb4b20e916f3ba", size = 8159, upload-time = "2022-06-01T00:25:51.242Z" },
+]
+
+[[package]]
 name = "bidict"
 version = "0.23.1"
 source = { registry = "https://pypi.org/simple" }
@@ -664,6 +679,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5d/78/1b74c5bbb3f99b77a1715c91b3e0b5bdb6fe302d95ace4f5b1bec37b0167/charset_normalizer-3.4.7-cp313-cp313-win_amd64.whl", hash = "sha256:3946fa46a0cf3e4c8cb1cc52f56bb536310d34f25f01ca9b6c16afa767dab110", size = 158819, upload-time = "2026-04-02T09:27:04.454Z" },
     { url = "https://files.pythonhosted.org/packages/68/86/46bd42279d323deb8687c4a5a811fd548cb7d1de10cf6535d099877a9a9f/charset_normalizer-3.4.7-cp313-cp313-win_arm64.whl", hash = "sha256:80d04837f55fc81da168b98de4f4b797ef007fc8a79ab71c6ec9bc4dd662b15b", size = 147915, upload-time = "2026-04-02T09:27:05.971Z" },
     { url = "https://files.pythonhosted.org/packages/db/8f/61959034484a4a7c527811f4721e75d02d653a35afb0b6054474d8185d4c/charset_normalizer-3.4.7-py3-none-any.whl", hash = "sha256:3dce51d0f5e7951f8bb4900c257dad282f49190fdbebecd4ba99bcc41fef404d", size = 61958, upload-time = "2026-04-02T09:28:37.794Z" },
+]
+
+[[package]]
+name = "circuit"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "logical" },
+    { name = "parts" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b5/f3/fff41eb3f2124f6a1bdfa9915b2745bf9c5eda84783540c6d0073b7adba7/circuit-1.1.0.tar.gz", hash = "sha256:bff194ca435b13e751bb704644455b3b1f5dd763a1d088b4789e4ce20e7aa5c2", size = 12107, upload-time = "2022-06-06T05:26:09.679Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c3/0f/46f4bec1dd3789df19ba7f6991fd767102965b47a50ce538cd2312e4effd/circuit-1.1.0-py3-none-any.whl", hash = "sha256:3193c1910cb242877b6cbe36a53d924d9836b38b1b9f09735a58abf0eaf52d7e", size = 11122, upload-time = "2022-06-06T05:26:07.837Z" },
 ]
 
 [[package]]
@@ -1723,6 +1751,15 @@ wheels = [
 ]
 
 [[package]]
+name = "logical"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/dc/65/1e505e9c1694091cd4990fbc7bd0b2340b13b00f43cbe26e0ca70ef56acd/logical-1.0.0.tar.gz", hash = "sha256:2cd5875f00d6524e9cad74e0310ba2a119723c019854a41b4b74a923a9ffc65f", size = 8818, upload-time = "2022-05-18T00:30:41.823Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/a8/32a0e7a7e7d7958a74f4ab78d9e880569d71397e77d331d2b894bd836f5b/logical-1.0.0-py3-none-any.whl", hash = "sha256:b3663abaf62211df91fcf0535bbf0f675b673e59b3ee681258b3dbefdfbd0ef7", size = 7830, upload-time = "2022-05-18T00:30:39.708Z" },
+]
+
+[[package]]
 name = "magika"
 version = "0.6.3"
 source = { registry = "https://pypi.org/simple" }
@@ -2244,6 +2281,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/e9/21/ea191195e587b18cf682e97f433f81b2d0fbe341380e80a3e0d6e4403c8e/pandas-3.0.3-cp313-cp313t-musllinux_1_2_aarch64.whl", hash = "sha256:d26cbe1fcfc12e8fd900e2454163e466b2d3af84f7c75481df7683ffc073d870", size = 11350796, upload-time = "2026-05-11T18:53:32.056Z" },
     { url = "https://files.pythonhosted.org/packages/64/69/f0eaaf54939f0e8c6768fd06be9af2cef9b36048b96dfb9e1b2c685a807e/pandas-3.0.3-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:3e91cec1879ada0624fc3dc9953c5cbd60208e59c0db28f540c5d6d47502422f", size = 11799741, upload-time = "2026-05-11T18:53:34.985Z" },
     { url = "https://files.pythonhosted.org/packages/45/a4/865e0e510cae5fc2194de4db28be638952de942571ba9125934fd9c01d47/pandas-3.0.3-cp313-cp313t-win_amd64.whl", hash = "sha256:08d789b41f87e0905880e293cedf6197ce71fe67cc081358b1e148a491b9bd13", size = 10499958, upload-time = "2026-05-11T18:53:37.857Z" },
+]
+
+[[package]]
+name = "parts"
+version = "1.7.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/19/8d/c971025951648cb570d27f2e57a2f629f33739037458703216cbf88b3db1/parts-1.7.0.tar.gz", hash = "sha256:4db70581628a8075c5ca2d4dab0572d484c61c449be19bac8af3a91566b3375b", size = 9215, upload-time = "2023-08-17T19:07:27.845Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ff/9d/75d171197827ff3b4cc85d6f6487a09fc941b0ad55ee9fcdc987777419dd/parts-1.7.0-py3-none-any.whl", hash = "sha256:8308ac0293511f1ee25a62bb1fb6e3662b248848314fddf92cb437414bb5d1f1", size = 7688, upload-time = "2023-08-17T19:07:26.73Z" },
 ]
 
 [[package]]
